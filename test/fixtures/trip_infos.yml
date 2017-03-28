@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dStreet: MyString
+  dCity: MyString
+  dState: MyString
+  dZip: 1
+  aStreet: MyString
+  aCity: MyString
+  aState: MyString
+  aZip: 1
+  dDate: 2017-03-28 19:12:31
+  aDate: 2017-03-28 19:12:31
+  duration: 2017-03-28 19:12:31
+  price: 1.5
+
+two:
+  dStreet: MyString
+  dCity: MyString
+  dState: MyString
+  dZip: 1
+  aStreet: MyString
+  aCity: MyString
+  aState: MyString
+  aZip: 1
+  dDate: 2017-03-28 19:12:31
+  aDate: 2017-03-28 19:12:31
+  duration: 2017-03-28 19:12:31
+  price: 1.5

@@ -1,35 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  driver: one
-  passengers: one
-  dStreet: MyString
-  dCity: MyString
-  dState: MyString
-  dZip: 1
-  aStreet: MyString
-  aCity: MyString
-  aState: MyString
-  aZip: 1
-  depDate: 2017-03-28 15:37:22
-  duration: 2017-03-28 15:37:22
-  expectedArr: 2017-03-28 15:37:22
-  price: 1.5
-  car: one
+  driver: 1
+  passengers: 1
+  trip_info: 1
 
 two:
-  driver: two
-  passengers: two
-  dStreet: MyString
-  dCity: MyString
-  dState: MyString
-  dZip: 1
-  aStreet: MyString
-  aCity: MyString
-  aState: MyString
-  aZip: 1
-  depDate: 2017-03-28 15:37:22
-  duration: 2017-03-28 15:37:22
-  expectedArr: 2017-03-28 15:37:22
-  price: 1.5
-  car: two
+  driver: 1
+  passengers: 1
+  trip_info: 1

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170328153748) do
+ActiveRecord::Schema.define(version: 20170328191339) do
 
   create_table "cars", force: :cascade do |t|
     t.string   "make"
@@ -24,11 +24,11 @@ ActiveRecord::Schema.define(version: 20170328153748) do
     t.string   "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_cars_on_user_id"
   end
 
-  create_table "trips", force: :cascade do |t|
-    t.integer  "driver_id"
-    t.integer  "passengers_id"
+  create_table "trip_infos", force: :cascade do |t|
     t.string   "dStreet"
     t.string   "dCity"
     t.string   "dState"
@@ -37,16 +37,20 @@ ActiveRecord::Schema.define(version: 20170328153748) do
     t.string   "aCity"
     t.string   "aState"
     t.integer  "aZip"
-    t.datetime "depDate"
+    t.datetime "dDate"
+    t.datetime "aDate"
     t.time     "duration"
-    t.datetime "expectedArr"
     t.float    "price"
-    t.integer  "car_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.index ["car_id"], name: "index_trips_on_car_id"
-    t.index ["driver_id"], name: "index_trips_on_driver_id"
-    t.index ["passengers_id"], name: "index_trips_on_passengers_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "trips", force: :cascade do |t|
+    t.integer  "driver"
+    t.integer  "passengers"
+    t.integer  "trip_info"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
