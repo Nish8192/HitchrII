@@ -1,7 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  owner: one
   make: MyString
   model: MyString
   year: 1
@@ -13,7 +12,6 @@ one:
   color: MyString
 
 two:
-  owner: two
   make: MyString
   model: MyString
   year: 1

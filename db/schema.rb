@@ -10,10 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170328151431) do
+ActiveRecord::Schema.define(version: 20170328153748) do
 
   create_table "cars", force: :cascade do |t|
-    t.integer  "owner_id"
     t.string   "make"
     t.string   "model"
     t.integer  "year"
@@ -25,16 +24,19 @@ ActiveRecord::Schema.define(version: 20170328151431) do
     t.string   "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["owner_id"], name: "index_cars_on_owner_id"
   end
 
   create_table "trips", force: :cascade do |t|
     t.integer  "driver_id"
     t.integer  "passengers_id"
-    t.float    "depLat"
-    t.float    "depLong"
-    t.float    "arrLat"
-    t.float    "arrLong"
+    t.string   "dStreet"
+    t.string   "dCity"
+    t.string   "dState"
+    t.integer  "dZip"
+    t.string   "aStreet"
+    t.string   "aCity"
+    t.string   "aState"
+    t.integer  "aZip"
     t.datetime "depDate"
     t.time     "duration"
     t.datetime "expectedArr"
@@ -52,8 +54,10 @@ ActiveRecord::Schema.define(version: 20170328151431) do
     t.string   "l_name"
     t.string   "email"
     t.string   "password_digest"
-    t.float    "lat"
-    t.float    "long"
+    t.string   "street"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "zipCode"
     t.string   "phone"
     t.date     "bday"
     t.string   "gender"

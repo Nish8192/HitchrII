@@ -5,8 +5,10 @@ one:
   l_name: MyString
   email: MyString
   password_digest: <%= BCrypt::Password.create('secret') %>
-  lat: 1.5
-  long: 1.5
+  street: MyString
+  city: MyString
+  state: MyString
+  zipCode: 1
   phone: MyString
   bday: 2017-03-28
   gender: MyString
@@ -17,8 +19,10 @@ two:
   l_name: MyString
   email: MyString
   password_digest: <%= BCrypt::Password.create('secret') %>
-  lat: 1.5
-  long: 1.5
+  street: MyString
+  city: MyString
+  state: MyString
+  zipCode: 1
   phone: MyString
   bday: 2017-03-28
   gender: MyString

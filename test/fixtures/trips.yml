@@ -3,25 +3,33 @@
 one:
   driver: one
   passengers: one
-  depLat: 1.5
-  depLong: 1.5
-  arrLat: 1.5
-  arrLong: 1.5
-  depDate: 2017-03-28 15:09:19
-  duration: 2017-03-28 15:09:19
-  expectedArr: 2017-03-28 15:09:19
+  dStreet: MyString
+  dCity: MyString
+  dState: MyString
+  dZip: 1
+  aStreet: MyString
+  aCity: MyString
+  aState: MyString
+  aZip: 1
+  depDate: 2017-03-28 15:37:22
+  duration: 2017-03-28 15:37:22
+  expectedArr: 2017-03-28 15:37:22
   price: 1.5
   car: one
 
 two:
   driver: two
   passengers: two
-  depLat: 1.5
-  depLong: 1.5
-  arrLat: 1.5
-  arrLong: 1.5
-  depDate: 2017-03-28 15:09:19
-  duration: 2017-03-28 15:09:19
-  expectedArr: 2017-03-28 15:09:19
+  dStreet: MyString
+  dCity: MyString
+  dState: MyString
+  dZip: 1
+  aStreet: MyString
+  aCity: MyString
+  aState: MyString
+  aZip: 1
+  depDate: 2017-03-28 15:37:22
+  duration: 2017-03-28 15:37:22
+  expectedArr: 2017-03-28 15:37:22
   price: 1.5
   car: two

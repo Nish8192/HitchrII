@@ -3,10 +3,14 @@ class CreateTrips < ActiveRecord::Migration[5.0]
     create_table :trips do |t|
       t.references :driver, foreign_key: true
       t.references :passengers, foreign_key: true
-      t.float :depLat
-      t.float :depLong
-      t.float :arrLat
-      t.float :arrLong
+      t.string :dStreet
+      t.string :dCity
+      t.string :dState
+      t.integer :dZip
+      t.string :aStreet
+      t.string :aCity
+      t.string :aState
+      t.integer :aZip
       t.datetime :depDate
       t.time :duration
       t.datetime :expectedArr
