@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  driver: one
+  passengers: one
+  depLat: 1.5
+  depLong: 1.5
+  arrLat: 1.5
+  arrLong: 1.5
+  depDate: 2017-03-28 15:09:19
+  duration: 2017-03-28 15:09:19
+  expectedArr: 2017-03-28 15:09:19
+  price: 1.5
+  car: one
+
+two:
+  driver: two
+  passengers: two
+  depLat: 1.5
+  depLong: 1.5
+  arrLat: 1.5
+  arrLong: 1.5
+  depDate: 2017-03-28 15:09:19
+  duration: 2017-03-28 15:09:19
+  expectedArr: 2017-03-28 15:09:19
+  price: 1.5
+  car: two
