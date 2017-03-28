@@ -1,0 +1,23 @@
+<h2>Welcome to Hitchr!</h2>
+<form action="/sessions/create" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <p>Email: <input type="text" name="email" /></p>
+    <p>Password: <input type="password" name="password" /></p>
+    <p><input type="submit" value="login" /></p>
+</form>
+<br />
+<h2>The available trips:</h2>
+<% if @trips%>
+<% @trips.each do |trip| %>
+<p>Driver: <%=trip.driver.f_name%> <%=trip.driver.l_name%></p>
+    <% if trip.passengers %>
+    <% trip.passengers.each do |passenger| %>
+<p>Passenger: <%=passenger.f_name%> <%=passenger.l_name%></p>
+    <%end%>
+    <%end%>
+<p>Car: <%=trip.car.year%> <%=trip.car.make%> <%=trip.car.model%> <%=trip.car.color%></p>
+<p>Departure: <%=trip.dCity%> <%=trip.dState%> <%=trip.depDate%></p>
+<p>Destination: <%=trip.aCity%> <%=trip.aState%></p>
+<p>Price/Seat: $<%=trip.price%> </p>
+<%end%>
+<%end%>
