@@ -1,0 +1,14 @@
+<% if @trips%>
+<% @trips.each do |trip| %>
+<p>Driver: <%=trip.driver.f_name%> <%=trip.driver.l_name%></p>
+    <% if trip.passengers %>
+    <% trip.passengers.each do |passenger| %>
+<p>Passenger: <%=passenger.f_name%> <%=passenger.l_name%></p>
+    <%end%>
+    <%end%>
+<p>Car: <%=trip.car.year%> <%=trip.car.make%> <%=trip.car.model%> <%=trip.car.color%></p>
+<p>Departure: <%=trip.dCity%> <%=trip.dState%> <%=trip.depDate%></p>
+<p>Destination: <%=trip.aCity%> <%=trip.aState%></p>
+<p>Price/Seat: $<%=trip.price%> </p>
+<%end%>
+<%end%>
