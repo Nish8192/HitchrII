@@ -31,8 +31,14 @@
         <div class="form-group">
           <input type="password" placeholder="Password" class="form-control" name="password">
         </div>
-        <button type="submit" class="btn btn-success">Sign in</button>
+        <button type="submit" class="btn btn-success">Sign In</button>
       </form>
+      <form class="navbar-form navbar-right" action="/users/new" method="get">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">Sign Up</button>
+        </div>
+    </form>
     </div><!--/.navbar-collapse -->
   </div>
 </nav>
