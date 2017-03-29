@@ -1,44 +1,4 @@
-<script>
-    $(document).ready(function(){
-        $.get(`http://ip-api.com/json/#<%=remote_ip%>`, function(res){
-            $('#container2').append(
-                `<p>${res.city}</p>`
-            );
-        }, 'json');
-        $('.carousel').carousel({
-            interval: 5000 //changes the speed
-        });
-    });
-
-</script>
-<style>
-.carousel,
-.item,
-.active {
-    height: 100%;
-}
-
-.carousel-inner {
-    height: 100%;
-}
-
-/* Background images are set within the HTML using inline CSS, not here */
-
-.fill {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-</style>
-
 <nav class="navbar navbar-inverse navbar-fixed-top">
-    <script>
-        alert(user_info.city);
-    </script>
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -64,10 +24,9 @@
   </div>
 </nav>
 
-
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
-  <div class="container" id="container2">
+  <div class="container">
     <h2>The available trips in your area:</h2>
     <div class="row">
         <div class="col-md-12">
@@ -146,48 +105,25 @@
 </div>
 </div>
 
-<header id="myCarousel" class="carousel slide">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for Slides -->
-    <div class="carousel-inner">
-        <div class="item active">
-            <!-- Set the first background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('https://www.aviary.com/img/photo-landscape.jpg&text=Slide One');"></div>
-            <div class="carousel-caption">
-                <h2>Caption 1</h2>
-            </div>
-        </div>
-        <div class="item">
-            <!-- Set the second background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('https://www.aviary.com/img/photo-landscape.jpg&text=Slide Two');"></div>
-            <div class="carousel-caption">
-                <h2>Caption 2</h2>
-            </div>
-        </div>
-        <div class="item">
-            <!-- Set the third background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
-            <div class="carousel-caption">
-                <h2>Caption 3</h2>
-            </div>
-        </div>
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Heading</h2>
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
     </div>
-
-    <!-- Controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="icon-prev"></span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="icon-next"></span>
-    </a>
-
-</header>
+    <div class="col-md-4">
+      <h2>Heading</h2>
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+   </div>
+    <div class="col-md-4">
+      <h2>Heading</h2>
+      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    </div>
+  </div>
 
   <hr>
   <footer class="footer">
@@ -195,5 +131,4 @@
       <p class="text-muted">&copy; 2017 NA-JZ, Inc.</p>
     </div>
   </footer>
-<!-- </div>  -->
-<!-- /container -->
+</div> <!-- /container -->
