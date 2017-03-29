@@ -1,23 +1,95 @@
-<h2>Welcome to Hitchr!</h2>
-<form action="/sessions/create" method="post">
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-    <p>Email: <input type="text" name="email" /></p>
-    <p>Password: <input type="password" name="password" /></p>
-    <p><input type="submit" value="login" /></p>
-</form>
-<br />
-<h2>The available trips:</h2>
-<% if @trips%>
-<% @trips.each do |trip| %>
-<p>Driver: <%=trip.driver.f_name%> <%=trip.driver.l_name%></p>
-    <% if trip.passengers %>
-    <% trip.passengers.each do |passenger| %>
-<p>Passenger: <%=passenger.f_name%> <%=passenger.l_name%></p>
-    <%end%>
-    <%end%>
-<p>Car: <%=trip.car.year%> <%=trip.car.make%> <%=trip.car.model%> <%=trip.car.color%></p>
-<p>Departure: <%=trip.dCity%> <%=trip.dState%> <%=trip.depDate%></p>
-<p>Destination: <%=trip.aCity%> <%=trip.aState%></p>
-<p>Price/Seat: $<%=trip.price%> </p>
-<%end%>
-<%end%>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Hitchr!</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form class="navbar-form navbar-right" action="/sessions/create" method="post">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <div class="form-group">
+          <input type="text" placeholder="Email" class="form-control" name="email">
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" class="form-control" name="password">
+        </div>
+        <button type="submit" class="btn btn-success">Sign in</button>
+      </form>
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <div class="container">
+    <h2>The available trips in your area:</h2>
+    <div class="row">
+        <div class="col-md-12">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Leave From</th>
+                <th>Destination</th>
+                <th>Leave On</th>
+                <th>$$ Per Rider</th>
+                <th>Seats Available</th>
+                <th>Vehicle</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Washington, DC</td>
+                <td>New York, NY</td>
+                <td>04/01/2017</td>
+                <td>$25</td>
+                <td>3 of 4</td>
+                <td>2017 BMW M8</td>
+                <td><button type="button" class="btn btn-sm btn-success">Join!</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+      <iframe
+          width="950"
+          height="450"
+          frameborder="0" style="border:1"
+          src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCGkc4zfM8yunEOefOTtYk2C8HN9QYuu7w&origin=White+House,Washington,DC&destination=Time+Square,New+York,NY" allowfullscreen>
+      </iframe>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Heading</h2>
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2>Heading</h2>
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+   </div>
+    <div class="col-md-4">
+      <h2>Heading</h2>
+      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    </div>
+  </div>
+
+  <hr>
+
+  <footer>
+    <p>&copy; 2016 NA-JZ, Inc.</p>
+  </footer>
+</div> <!-- /container -->
