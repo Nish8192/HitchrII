@@ -1,17 +1,4 @@
-<script>
-    $(document).ready(function(){
-        $.get(`http://ip-api.com/json/#<%=remote_ip%>`, function(res){
-            $('#container2').append(
-                `<p>${res.city}</p>`
-            );
-        }, 'json');
-    });
-</script>
-
 <nav class="navbar navbar-inverse navbar-fixed-top">
-    <script>
-        alert(user_info.city);
-    </script>
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -31,22 +18,15 @@
         <div class="form-group">
           <input type="password" placeholder="Password" class="form-control" name="password">
         </div>
-        <button type="submit" class="btn btn-success">Sign In</button>
+        <button type="submit" class="btn btn-success">Sign in</button>
       </form>
-      <form class="navbar-form navbar-right" action="/users/new" method="get">
-          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-        <div class="form-group">
-            <button type="submit" class="btn btn-success">Sign Up</button>
-        </div>
-    </form>
     </div><!--/.navbar-collapse -->
   </div>
 </nav>
 
-
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
-  <div class="container" id="container2">
+  <div class="container">
     <h2>The available trips in your area:</h2>
     <div class="row">
         <div class="col-md-12">
@@ -72,7 +52,7 @@
                 <td>$25</td>
                 <td>3 of 4</td>
                 <td>2017 BMW M8</td>
-                <td><button type="button" class="btn btn-sm btn-success">Join!</button></td>
+                <td><a type="button" class="btn btn-sm btn-success" href="/users/new">Join!</a></td>
               </tr>
             </tbody>
           </table>

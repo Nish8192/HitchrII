@@ -6,14 +6,19 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <!-- Latest compiled and minified CSS -->
 
+    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="app/assets/stylesheets/bootstrap.min.css" >
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="app/assets/javascripts/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="app/assets/javascripts/bootstrap.min.js"></script>
-    <!-- Optional theme -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js">
         $(document).ready(function(){
             $.get(`http://ip-api.com/json/72.213.254.184`, function(res){
